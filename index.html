@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RANDOM BACKGROUND COLOR</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+<button onclick="changecolor()">Change Background Color Randomly</button>
+
+<button class="copy" onclick="copycode()">Copy Color Code</button>
+</body>
+
+<script>
+
+let randombgcolor; // Define randombgcolor in a broader scope
+
+function changecolor() {
+  let random1 = Math.floor(Math.random() * 256);
+  let random2 = Math.floor(Math.random() * 256);
+  let random3 = Math.floor(Math.random() * 256);
+  randombgcolor = "rgb(" + random1 + "," + random2 + "," + random3 + ")";
+  document.body.style.backgroundColor = randombgcolor;
+}
+
+function copycode() {
+  if (randombgcolor) {
+    navigator.clipboard.writeText(randombgcolor)
+      .then(() => {
+        alert(randombgcolor + " color code copied to clipboard");
+      })
+      .catch((err) => {
+        console.error("Unable to copy color code to clipboard: ", err);
+      });
+  } else {
+    alert("Generate a color code first by clicking 'Change Background Color Randomly'.");
+  }
+}
+
+</script>
+</html>

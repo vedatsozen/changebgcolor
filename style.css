@@ -1,0 +1,21 @@
+body {
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+button {
+    margin: auto;
+    margin-top: 250px;
+    cursor: pointer;
+    padding: 7px 10px;
+    font-size: 15px;
+    letter-spacing: 3px;
+}
+
+button.copy {
+    margin: auto;
+    display: block;
+    margin-top:10px;
+    cursor: pointer;
+    padding: 7px 10px;
+}
